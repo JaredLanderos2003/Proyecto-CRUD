@@ -22,7 +22,8 @@ const Login = ({ onLogin }) => {
       <h2 className='texto1'>Control Escolar</h2>
       <h3>Login</h3>
       <input
-        type="email"
+        type="text"
+        id="username"
         placeholder="Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
