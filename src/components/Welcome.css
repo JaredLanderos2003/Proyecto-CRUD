@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(135deg, #1a2a3f, #1d3d59); /* Azul oscuro */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  animation: gradientBackground 8s infinite alternate;
+}
+
+/* Animación del fondo */
+@keyframes gradientBackground {
+  0% {
+    background: linear-gradient(135deg, #1a2a3f, #1d3d59);
+  }
+  100% {
+    background: linear-gradient(135deg, #2a3f66, #1d3557);
+  }
+}
+
+/* Contenedor principal */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(165, 165, 165);
+  border-radius: 20px;
+  padding: 40px;
+  width: 500px;
+  box-shadow: 0px 15px 30px rgb(0, 0, 0);
+  animation: slideUp 1s ease-out;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+/* Animación de aparición */
+@keyframes slideUp {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(0); }
+}
+
+/* Título */
+h1 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 28px;
+  color: #f0f4f8; /* Blanco elegante */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+}
+
+/* Formulario */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Se incrementó el espacio entre los elementos del formulario */
+  align-items: stretch;
+  width: 100%;
+}
+
+/* Campos de entrada */
+input {
+  padding: 12px;
+  border: none;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Botones */
+button {
+  padding: 15px 25px; /* Aumenté el padding horizontal para hacerlos más grandes */
+  margin: 20px 0; /* Se añadió un margen de 20px arriba y abajo para separarlos más */
+  border: none;
+  border-radius: 15px;
+  background: #3498db; /* Azul elegante */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Menú lateral */
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: #2c3e50; /* Fondo oscuro para el menú */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 0 15px 15px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Botón del menú */
+.menu-button {
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: #3498db;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu-button:hover {
+  background: #2980b9;
+  transform: scale(1.05);
+}

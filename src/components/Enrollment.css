@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    animation: backgroundAnimation 8s infinite alternate;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Animación de fondo */
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+    }
+    100% {
+        background: linear-gradient(135deg, #243342, #2c3e50);
+    }
+}
+
+/* Contenedor principal */
+.enrollment-container {
+    background: rgba(174, 174, 174, 0.946);
+    border-radius: 20px;
+    padding: 30px;
+    width: 450px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+    max-height: 80vh; /* Limitar la altura */
+    overflow-y: auto; /* Agregar scroll */
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 22px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Formulario */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+}
+
+/* Select */
+select {
+    padding: 12px;
+    border: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    text-indent: 10px;
+}
+
+select:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Botón */
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background: #2980b9;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #1c5980;
+    transform: scale(1.05);
+}
+
+/* Mensajes de error */
+.error {
+    color: #e74c3c;
+    font-weight: bold;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Lista de inscripciones */
+.enrollment-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+.enrollment-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.enrollment-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Botones en la lista */
+.enrollment-list button {
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 10px;
+    background: #2980b9;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.enrollment-list button:hover {
+    background: #1c5980;
+    transform: scale(1.1);
+}
+
+/* Animación de fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilo para la imagen */
+.login-logo {
+    display: block;
+    margin: 0 auto 20px; /* Centrar imagen */
+    width: 150px; /* Ajustar el tamaño de la imagen */
+    height: auto; /* Mantener la proporción */
+}

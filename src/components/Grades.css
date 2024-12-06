@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #001f3f, #003366);
+    animation: backgroundAnimation 10s infinite alternate;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Animación de fondo */
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(135deg, #001f3f, #003366);
+    }
+    100% {
+        background: linear-gradient(135deg, #001a33, #002244);
+    }
+}
+
+/* Contenedor general */
+.grades-capture-container {
+    background: rgb(160, 160, 160);
+    border-radius: 20px;
+    padding: 40px;
+    width: 500px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 24px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Formulario */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+}
+
+/* Inputs y selects */
+select, input {
+    padding: 12px;
+    border: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    text-indent: 10px;
+}
+
+select:focus, input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Botones */
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background: #004080;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #00264d;
+    transform: scale(1.05);
+}
+
+/* Mensajes de error */
+.error {
+    color: #ff4d4d;
+    font-weight: bold;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Lista de calificaciones */
+.grades-list-container {
+    max-height: 300px;  /* Ajusta la altura del contenedor */
+    overflow-y: auto;  /* Activa el scroll vertical */
+    margin-top: 20px;
+}
+
+.grades-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.grades-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.grades-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.grades-list button {
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 10px;
+    background: #004080;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.grades-list button:hover {
+    background: #00264d;
+    transform: scale(1.1);
+}
+
+/* Menú lateral */
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu button {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #004080;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu button:hover {
+    background: #00264d;
+    transform: scale(1.2);
+}
+
+/* Animación de fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
